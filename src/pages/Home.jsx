@@ -40,7 +40,7 @@ const Home = () => {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="relative h-[60vh] md:h-[85vh] bg-gray-900 overflow-hidden group">
+      <section className="relative h-[70vh] md:h-[85vh] bg-gray-900 overflow-hidden group">
         
         {/* Sliding Background Images container */}
         <div 
@@ -70,10 +70,10 @@ const Home = () => {
                    key={`text-${index}`} 
                    className={`absolute top-0 left-0 transition-opacity duration-1000 ease-in-out w-full ${index === currentSlide ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
                  >
-                   <span className="inline-block py-1 px-4 rounded-full bg-blue-500/20 text-blue-300 font-semibold text-[10px] md:text-sm mb-4 md:mb-6 uppercase tracking-wider backdrop-blur-sm border border-blue-500/30">
+                   <span className="inline-block py-2 px-2 rounded-full bg-blue-500/20 text-blue-300 font-semibold text-[10px] md:text-sm  uppercase tracking-wider backdrop-blur-sm border border-blue-500/30 ">
                      Welcome to Megas Fabric
                    </span>
-                   <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4">
+                   <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mt-2">
                      {slide.title} <br /> 
                      <span className="text-blue-400">{slide.highlight}</span>
                    </h1>
@@ -84,11 +84,11 @@ const Home = () => {
                ))}
             </div>
 
-            <div className="flex flex-wrap gap-4 mt-4 md:mt-8">
+            <div className="flex flex-wrap gap-5 mt-4 md:mt-8">
               <Link to="/book-appointment" className="bg-brand-blue text-white px-6 md:px-8 py-3 md:py-4 rounded-full font-bold text-sm md:text-base hover:bg-blue-600 shadow-xl shadow-blue-500/20 transition-all duration-300 transform hover:-translate-y-1 relative z-30">
                 Book Appointment
               </Link>
-              <Link to="/all-collections" className="bg-white/10 text-white backdrop-blur-md border border-white/20 px-6 md:px-8 py-3 md:py-4 rounded-full font-bold text-sm md:text-base hover:bg-white/20 transition-all duration-300 flex items-center gap-2 relative z-30">
+              <Link to="/all-collections" className="bg-white/10 text-white backdrop-blur-md border border-white/20 px-6 md:px-8 py-3 md:py-4 rounded-full font-bold text-sm md:text-base hover:bg-white/20 transition-all duration-300 flex items-center gap-2 relative z-30 ">
                 Shop Collections <ArrowRight size={16} />
               </Link>
             </div>
@@ -104,7 +104,7 @@ const Home = () => {
         </button>
         
         {/* Indicators */}
-        <div className="absolute bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 z-30 flex gap-2 md:gap-3">
+        {/* <div className="absolute bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 z-30 flex gap-2 md:gap-3">
           {heroSlides.map((_, idx) => (
              <button 
                key={idx} 
@@ -112,7 +112,7 @@ const Home = () => {
                className={`w-2 h-2 md:w-3 md:h-3 rounded-full transition-all cursor-pointer ${idx === currentSlide ? 'bg-brand-blue w-6 md:w-8' : 'bg-white/50 hover:bg-white'}`}
              />
           ))}
-        </div>
+        </div> */}
       </section>
 
       {/* Featured Categories Grid */}
